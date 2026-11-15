@@ -1,4 +1,4 @@
 def info():
-    return Operaciones basicas
+    return "Operaciones basicas"
 def suma(a,b):
     return a+b
