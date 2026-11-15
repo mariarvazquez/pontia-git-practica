@@ -1,0 +1,20 @@
+
+name: Demo mensaje
+
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: 'Mensaje que quieres imprimir'
+        required: true
+        type: string
+
+jobs:
+  mostrar-mensaje:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir mensaje
+        env:
+          MENSAJE: ${{ inputs.mensaje }}
+        run: echo "$MENSAJE"
+  
